@@ -1,4 +1,15 @@
 #!/bin/bash
+if [[ $USER == root* ]]
+then
+    echo "! USER IS ROOT. PLEASE RUN SCRIPT AS NON-ROOT USER. !"
+    exit
+else
+    echo "! USER IS NOT ROOT, CONTINUING. !"
+fi
+
+echo "! Please ensure USB Wifi Adaptor is plugged in prior to installation. !"
+read -p "! Press enter to continue. !"
+
 sudo apt update -y
 
 sudo apt install dkms git build-essential libelf-dev linux-headers-$(uname -r) -y
