@@ -1,4 +1,8 @@
 #!/bin/bash
+
+# TODO: lowkey I have no clue whether this script works anymore, can someone just make an actual driver pls
+
+
 if [[ $USER == root* ]]
 then
     echo "! USER IS ROOT. PLEASE RUN SCRIPT AS NON-ROOT USER. !"
